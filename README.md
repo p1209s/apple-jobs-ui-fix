@@ -93,6 +93,7 @@ For demonstration purposes, I used the following technologies:
 ![IMG_0011](https://github.com/user-attachments/assets/33913dc0-7d42-42a8-90f3-e302e69ec0ba)
 
 🔗 References & Resources
+
 Apple Jobs – Official Website - https://jobs.apple.com/en-ca/search?location=canada-CANC
 
 💬 Final Thoughts
