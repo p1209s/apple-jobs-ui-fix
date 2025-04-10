@@ -84,15 +84,15 @@ Demo/Prototype link will be added soon.
 
 The UI before signing in (Sign In button visible):
 
-
+![IMG_0009](https://github.com/user-attachments/assets/9beab676-4f56-45f8-aa0d-1c7b6bb75792)
 
 The UI after signing in (Sign In button still visible):
 
-
+![IMG_0010](https://github.com/user-attachments/assets/5633d44c-136d-4d78-ba53-0ec6a87fa6e2)
 
 The pop-up after clicking the Sign In button again (Signed Out message):
 
-
+![IMG_0011](https://github.com/user-attachments/assets/33913dc0-7d42-42a8-90f3-e302e69ec0ba)
 
 🔗 References & Resources
 Apple Jobs – Official Website - https://jobs.apple.com/en-ca/search?location=canada-CANC
