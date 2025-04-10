@@ -98,9 +98,11 @@ The pop-up after clicking the Sign In button again (Signed Out message):
 Apple Jobs – Official Website - https://jobs.apple.com/en-ca/search?location=canada-CANC
 
 💬 Final Thoughts
+
 Though small, this bug negatively affects the user experience on a high-traffic platform like Apple Jobs. It introduces unnecessary confusion, especially for job seekers who need clear feedback on their login status. By improving this flow, users would feel more confident and engaged during the application process.
 
 🙋‍♂️ About Me
+
 I’m Priyank Shah, a frontend developer focused on crafting user-centric interfaces and improving web experiences. This case study reflects my passion for solving real-world problems with code.
 
 💼 LinkedIn - https://www.linkedin.com/in/priyankshah
@@ -108,5 +110,6 @@ I’m Priyank Shah, a frontend developer focused on crafting user-centric interf
 📮 Reach out for collaborations or opportunities!
 
 📫 Feedback or Collaboration?
+
 If you work at Apple or a similar platform and found this issue useful, I’d love to hear your thoughts. I'm always open to collaboration and contributing to frontend/UI projects!
 
