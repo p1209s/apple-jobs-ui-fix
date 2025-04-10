@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# 🐞 UX Bug Case Study: Apple Jobs – Sign-In Button Issue
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Summary
 
-## Available Scripts
+While browsing the [Apple Jobs](https://jobs.apple.com/) website, I discovered a frontend UX issue: the **“Sign In”** button does not update to reflect the logged-in state. After successfully logging in, clicking the **“Sign In”** button again signs the user out and triggers a pop-up window with a "Signed Out" message.
 
-In the project directory, you can run:
+This case study outlines the issue, its implications for the user experience, and a proposed solution to improve clarity and consistency.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🔍 Problem Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ❗ Issue Observed
 
-### `npm test`
+- After logging into the Apple Jobs platform, the **“Sign In”** button remains unchanged, still displaying “Sign In.”
+- Clicking the **“Sign In”** button again logs the user out.
+- A **pop-up window** appears, saying “Signed Out.”
+- This behavior can confuse users, as there’s no indication they are logged in prior to clicking the button again.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⚠️ Why It’s a Problem
 
-### `npm run build`
+- **Confusing UI:** Users might not realize they are already signed in, leading them to click the button and unexpectedly log out.
+- **Poor User Flow:** This issue disrupts the user's journey, especially when managing applications or profile settings.
+- **Loss of Trust:** Users expect a seamless authentication flow, and this bug breaks that trust.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✅ Expected Behavior
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After a successful login, the **“Sign In”** button should update to reflect the logged-in state. It should:
 
-### `npm run eject`
+- Change to something like **“My Account,”** **“Profile,”** or even a dropdown menu containing options such as **“Profile”** and **“Sign Out.”**
+- If the user is already logged in, clicking the button should not log them out unexpectedly.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Proposed Frontend Fix (React Example)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A simple conditional rendering fix using React could solve this:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```jsx
+{
+  isAuthenticated ? (
+    <DropdownMenu>
+      <button>My Account</button>
+      <ul>
+        <li>
+          <a href="/profile">View Profile</a>
+        </li>
+        <li>
+          <button onClick={handleLogout}>Sign Out</button>
+        </li>
+      </ul>
+    </DropdownMenu>
+  ) : (
+    <button onClick={handleLogin}>Sign In</button>
+  );
+}
+```
