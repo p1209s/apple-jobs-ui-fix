@@ -61,36 +61,34 @@ A simple conditional rendering fix using React could solve this:
 Note: isAuthenticated would typically be managed by a global auth provider (e.g., Context API, Redux, or OAuth hooks) to ensure seamless state management across the application.
 
 🧪 Reproduction Steps
-Visit https://jobs.apple.com.
+- Visit https://jobs.apple.com.
 
-Click Sign In and complete the login process.
+- Click Sign In and complete the login process.
 
-Observe that the “Sign In” button remains visible, even after a successful login.
+- Observe that the “Sign In” button remains visible, even after a successful login.
 
-Click the “Sign In” button again — you will be logged out, and a pop-up will appear with the message “Signed Out.”
+- Click the “Sign In” button again — you will be logged out, and a pop-up will appear with the message “Signed Out.”
 
 🧰 Tools & Tech Used for Prototype
 For demonstration purposes, I used the following technologies:
 
-React for component-based UI rendering
+- React for component-based UI rendering
 
-HTML/CSS for layout and styles
+- HTML/CSS for layout and styles
 
-State simulation to mock user authentication
-
-Demo/Prototype link will be added soon.
+- State simulation to mock user authentication
 
 📸 Screenshots
 
-The UI before signing in (Sign In button visible):
+1. The UI before signing in (Sign In button visible):
 
 ![IMG_0009](https://github.com/user-attachments/assets/9beab676-4f56-45f8-aa0d-1c7b6bb75792)
 
-The UI after signing in (Sign In button still visible):
+2. The UI after signing in (Sign In button still visible):
 
 ![IMG_0010](https://github.com/user-attachments/assets/5633d44c-136d-4d78-ba53-0ec6a87fa6e2)
 
-The pop-up after clicking the Sign In button again (Signed Out message):
+3. The pop-up after clicking the Sign In button again (Signed Out message):
 
 ![IMG_0011](https://github.com/user-attachments/assets/33913dc0-7d42-42a8-90f3-e302e69ec0ba)
 
