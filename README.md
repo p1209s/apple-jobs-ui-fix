@@ -1,4 +1,4 @@
-# 🐞 UX Bug Case Study: Apple Jobs – Sign-In Button Issue
+﻿# 🐞 UX Bug Case Study: Apple Jobs – Sign-In Button Issue
 
 ## 📌 Summary
 
@@ -57,3 +57,56 @@ A simple conditional rendering fix using React could solve this:
   );
 }
 ```
+
+Note: isAuthenticated would typically be managed by a global auth provider (e.g., Context API, Redux, or OAuth hooks) to ensure seamless state management across the application.
+
+🧪 Reproduction Steps
+Visit https://jobs.apple.com.
+
+Click Sign In and complete the login process.
+
+Observe that the “Sign In” button remains visible, even after a successful login.
+
+Click the “Sign In” button again — you will be logged out, and a pop-up will appear with the message “Signed Out.”
+
+🧰 Tools & Tech Used for Prototype
+For demonstration purposes, I used the following technologies:
+
+React for component-based UI rendering
+
+HTML/CSS for layout and styles
+
+State simulation to mock user authentication
+
+Demo/Prototype link will be added soon.
+
+📸 Screenshots
+
+The UI before signing in (Sign In button visible):
+
+
+
+The UI after signing in (Sign In button still visible):
+
+
+
+The pop-up after clicking the Sign In button again (Signed Out message):
+
+
+
+🔗 References & Resources
+Apple Jobs – Official Website - https://jobs.apple.com/en-ca/search?location=canada-CANC
+
+💬 Final Thoughts
+Though small, this bug negatively affects the user experience on a high-traffic platform like Apple Jobs. It introduces unnecessary confusion, especially for job seekers who need clear feedback on their login status. By improving this flow, users would feel more confident and engaged during the application process.
+
+🙋‍♂️ About Me
+I’m Priyank Shah, a frontend developer focused on crafting user-centric interfaces and improving web experiences. This case study reflects my passion for solving real-world problems with code.
+
+💼 LinkedIn - https://www.linkedin.com/in/priyankshah
+
+📮 Reach out for collaborations or opportunities!
+
+📫 Feedback or Collaboration?
+If you work at Apple or a similar platform and found this issue useful, I’d love to hear your thoughts. I'm always open to collaboration and contributing to frontend/UI projects!
+
